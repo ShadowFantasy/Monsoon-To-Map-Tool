@@ -1,0 +1,11 @@
+{
+    "name": "Monsoon Sheet Api",
+    "version": "0.0.2",
+    "gitUrl": "https://github.com/ShadowFantasy/MonsoonToMapTool.git",
+    "authors": [ "ShadowFantasy58" ],
+    "license": "GNU GPLv3",
+    "namespace": "net.shadow.fantasy.lib.monsoon.sheetapi",
+    "description": "Automatically updates character information with their charactersheet on google. This requires a version of a DM REST character sheet available with this in the monsoon homebrew",
+    "shortDescription": "Update Your charactersheet",
+    "allowsUriAccess": true
+}
