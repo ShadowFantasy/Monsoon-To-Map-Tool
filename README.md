@@ -36,6 +36,8 @@ Navigate to "/MonsoonToMapTool/resources/tokenmacros/UpdateToken.mtmacro"
 THIS IS STILL IN DEVELOPMENT, for UpdateToken macro only retrieves sheet data, but it does not yet update the tokens! This will be added soon along with other features!
 
 # CREDITS
-Appscript for REST integration - [Theo Ephraim](https://github.com/onescales/google-sheet-api.git)
+Appscript for REST integration - [Onescales](https://github.com/onescales/google-sheet-api.git)
+
 Monsoon RPG System and Base Character Sheet - Bray-G
+
 Macros, MonsoonToMaptool ADD-on, and Character Sheet Modifications - ShadowFantasy58
