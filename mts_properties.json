@@ -1,9 +1,6 @@
 {
     "properties": [
         {
-            "filename":  "public/CSU.mts",
-            "autoExecute": true,
-            "description": "This is meant to be included into the player tokens, do not run this from anywhere else."
         }
     ]
 }
