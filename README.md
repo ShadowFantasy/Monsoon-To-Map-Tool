@@ -32,8 +32,7 @@ Open the "Selected" dock, if not already open, go to Window -> Selected, select 
 Navigate to "/MonsoonToMapTool/resources/tokenmacros/UpdateToken.mtmacro"
 
 # Update Function has now been implemented (STILL IN DEVELOPMENT)
-~~your characters can now update their sheets with the UpdateToken Macro~~
-THIS IS STILL IN DEVELOPMENT, for UpdateToken macro only retrieves sheet data, but it does not yet update the sheet! This will be added soon along with other features!
+your characters can now update their sheets with the UpdateToken Macro
 
 # CREDITS
 Appscript for REST integration - [Theo Ephraim}(https://github.com/theoephraim/node-google-spreadsheet)
