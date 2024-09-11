@@ -1,1 +1,0 @@
-/Windows/System32/tar cvf MonsoonToMapTool.mtlib library library.json events.json mts_properties.json
