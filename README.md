@@ -1,51 +1,32 @@
 # Monsoon Character Sheet Integration
 Bring your charactersheet into maptool with a click of a button!
 
-## Setting Up Your Character Sheet (For Players)
-You MUST use a copy this modified Character Sheet in order to link up with MapTool
-https://docs.google.com/spreadsheets/d/1h0jELEscAGiumseXX-OCWvhsQ631BjOKcP1qGUQJ7BQ/edit?usp=sharing
+## Master Sheet UPDATE!!
+With this update comes more efficient retrieval of character data. With the mastersheet you can combine all of your player characters raw data onto a central spreadsheet that can allow for quick bulk updates of multiple charactersheets simultaneously
 
-Step 1: Create a copy of the provided charactersheet by going to File -> Make a copy
+## Set Up Your Master Sheet (Game Masters)
+1. Create a copy of this spreadsheet https://docs.google.com/spreadsheets/d/1OMnjw2Hec7aC-WjrwRlKF_pEdHYM7EofRri6Ff_OeD8/edit?usp=sharing into your google drive
+2. Open up the Appscript Extensions and click New Deployment
+3. Set the type to Web App and set the web app properties to Execute as you, and anyone has access.
+4. Copy the web app link
 
-Step 2: In your new copy of the charactersheet go to Extensions -> Apps Script
-
-Step 3: Navigate to Request.gs
-
-Step 4: Click Deploy -> New deployment
-
-Step 5: Click the gear in the top left and select "Web App"
-
-Step 6: Set "Who has access" to "Anyone"
-
-Step 7: Click deploy
-
-Step 8: Copy and save the "Web app URL", NOT the deployment ID, it will be referenced during MapTool Setup
-
-Warning! Becareful who or what sees this link, as it can be used to read and write to your charactersheet.
+For adding your players, add a shared link from their player sheets to the mastersheet SHEET LINK column
+If it works properly most of the fields should be filled in.
 
 ## Setting Up Your Maptool Campaign (For DMs)
 Configure your campaign to allow linking between your players charactersheets and player tokens.
 Import the included TokenType by going too Edit -> Capaign Properties, and in the Token Properties tab click the import button.
-Navigate to "/MonsoonToMapTool/resources/tokentypes/monsoon_tokentype_x.x.x.mtprops"
-
-## Setting Up Your Tokens (Player)
-Open up the MapTool token editor then go to Config, then to Properties and select Monsoon.
-Next navigate to the properties tab and inside of the "charactersheet" property include that Web App Url that was saved earlier
-
-
-# *WORK IN PROGRESS*
+Navigate to "/MonsoonToMapTool/resources/tokentypes/monsoon_npc.mtprops"
+Repeat this for "/MonsoonToMapTool/resources/tokentypes/monsoon_pc.mtprops"
 
 ## Adding The Macro To Your Players Tokens (DMs)
-Open the "Selected" dock, if not already open, go to Window -> Selected, select all player tokens, right click in Common Macros and select "Import Macro to Selected"
-Navigate to "/MonsoonToMapTool/resources/tokenmacros/UpdateToken.mtmacro"
-
-
-## Update Function has now been implemented (STILL IN DEVELOPMENT)
-your characters can now update their sheets with the UpdateToken Macro
+When you add the MonsoonToMapTool.mtlib to your campaign it should create buttons inside of your gm panel
+1. First you will want to setup your mastersheet, click the button and then provide your mastersheet web app URL
+2. Next you'll want to configure your Player's tokens, set their token property type to Monsoon PC, and set the token to be a Player Character.
+3. Then you'll want to set the token's GM name to their name inside of the Mastersheet
+4. With the player token selected, click Give Sheet Access. Your player will now have a new macro that lets them update their token
 
 ## CREDITS
-Appscript for REST integration - [Onescales](https://github.com/onescales/google-sheet-api.git)
-
 Monsoon RPG System and Base Character Sheet - Bray-G
 
 Macros, MonsoonToMaptool ADD-on, and Character Sheet Modifications - ShadowFantasy58
