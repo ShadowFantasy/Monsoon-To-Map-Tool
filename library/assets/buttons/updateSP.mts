@@ -1,6 +1,6 @@
 [H: libname = "net.shadow.fantasy.lib.monsoon.sheetapi"]
 [H: msURI = data.getData("addon:","net.shadow.fantasy.lib.monsoon.sheetapi", "Mastersheet")]
-[H: conditions = json.fromStrProp("selected=1;pc=1;propertyType=Monsoon PC;")]
+[H: conditions = json.fromStrProp("selected=1;propertyType=Monsoon PC;")]
 [H: tokens = getTokens(",",conditions)]
 [H: condition = listCount(tokens) > 0]
 [H, IF(condition), CODE:{
@@ -18,7 +18,6 @@
         [H: keys = json.fields(data)]
         [H, FOREACH(key, keys): setProperty(key, json.get(data,key),id)]
     }]
-
     [H: condition = countStrProp(characters)>0]
     [H, IF(condition): broadcast(formatStrProp(characters, "couldn't update characters:<br> %list","%key:%value","<br>"))]
 };{}]

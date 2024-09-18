@@ -6,7 +6,7 @@
     [H: macroGroup = getMacroGroup("Playersheet@monsoon.sheetapi", ",", id)]
     [H, FOREACH(index, macroGroup): removeMacro(index, id)]
 
-    [H: "Creates or updates the mastersheet update button. This is used for setting the link to the mastersheet that other important scripts require"]
+    [H: "Creates or updates the updateButton the token. This is used for setting the link to the mastersheet that other important scripts require"]
     [H: mtsfile = data.getStaticData(libname, "public/assets/buttons/updateToken.mts")]
     [H: jsonfile = data.getStaticData(libname, "public/assets/buttons/updateToken.json")]
     [H: mtsname = json.get(jsonfile,"label")]
@@ -16,5 +16,5 @@
     [H: setMacroCommand(mcbindex, mtsfile, id)]
 
     [H: "Sets the propertyType of the token"]
-    [H: setPropertyType("Monsoon Player")]
+    [H: setPropertyType("Monsoon Player",id)]
 }]

@@ -10,6 +10,6 @@
     "label": "Give Sheet Access",
     "maxWidth": "",
     "minWidth": "",
-    "playerEditable": 1,
+    "playerEditable": 0,
     "tooltip": "Gives limited sheet access for token updatability"
 }

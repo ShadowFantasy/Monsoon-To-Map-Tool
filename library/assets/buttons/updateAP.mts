@@ -1,6 +1,6 @@
 [H: libname = "net.shadow.fantasy.lib.monsoon.sheetapi"]
 [H: msURI = data.getData("addon:","net.shadow.fantasy.lib.monsoon.sheetapi", "Mastersheet")]
-[H: conditions = json.fromStrProp("pc=1;propertyType=Monsoon PC;")]
+[H: conditions = json.fromStrProp("propertyType=Monsoon PC;")]
 [H: tokens = getTokens(",",conditions)]
 [H: condition = listCount(tokens) > 0]
 [H, IF(condition), CODE:{

@@ -6,10 +6,10 @@
     "fontSize": "1.00em",
     "includeLabel": 0,
     "group": "Mastersheet@monsoon.sheetapi",
-    "sortBy": 1,
+    "sortBy": 2,
     "label": "Update Selected Players",
     "maxWidth": "",
     "minWidth": "",
-    "playerEditable": 2,
+    "playerEditable": 0,
     "tooltip": "Updates all selected player tokens"
 }

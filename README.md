@@ -26,6 +26,10 @@ When you add the MonsoonToMapTool.mtlib to your campaign it should create button
 3. Then you'll want to set the token's GM name to their name inside of the Mastersheet
 4. With the player token selected, click Give Sheet Access. Your player will now have a new macro that lets them update their token
 
+## Connecting
+The are sometimes problems when connecting to a server in Maptool. If your players are stuck on a loading screen this might help.
+    Players should install the addons used in your campaign into their maptool client before joining. Sometimes it's necessary for them to preload the addon in order to join, especially with larger addons with lots of scripts or files. 
+
 ## CREDITS
 Monsoon RPG System and Base Character Sheet - Bray-G
 

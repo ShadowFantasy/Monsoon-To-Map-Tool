@@ -42,7 +42,7 @@
 [H: mcbindex = createMacro(jsonfile, "gm")]
 [H: setMacroCommand(mcbindex, mtsfile, "gm")]
 
-[H: "-----Update All Players"]
+[H: "-----Update All Players-----"]
 [H: "Creates the update all button. This is used to allow the gm to update all player tokens."]
 [H: mtsfile = data.getStaticData(libname, "assets/buttons/updateAP.mts")]
 [H: jsonfile = data.getStaticData(libname, "assets/buttons/updateAP.json")]
@@ -51,3 +51,26 @@
 [H: broadcast(libname + "@onInit.mts: creating '" + mtsname +"'", "gm")]
 [H: mcbindex = createMacro(jsonfile, "gm")]
 [H: setMacroCommand(mcbindex, mtsfile, "gm")]
+
+[H: "-----------Dice@monsoon.sheetapi-----------"]
+[H: "Clear Dice@monsoon.sheetapi to ensure proper updates if any."]
+[H: broadcast(libname + "@onInit.mts: resetting Dice@monsoon.sheetapi campaign macro panel...", "gm")]
+[H: macroGroup = getMacroGroup("Dice@monsoon.sheetapi", ",", "campaign")]
+[H, FOREACH(index, macroGroup): removeMacro(index, "campaign")]
+
+[H: "-----Skill Check As Selected-----"]
+[H: "Creates the update all button. This is used to allow the gm to update all player tokens."]
+[H: mtsfile = data.getStaticData(libname, "public/assets/buttons/skillCheck.mts")]
+[H: jsonfile = data.getStaticData(libname, "public/assets/buttons/skillCheck.json")]
+[H: mtsname = json.get(jsonfile,"label")]
+
+[H: broadcast(libname + "@onInit.mts: creating '" + mtsname +"'", "gm")]
+[H: mcbindex = createMacro(jsonfile, "campaign")]
+[H: setMacroCommand(mcbindex, mtsfile, "campaign")]
+
+[H: "-----------User Defined Functions-----------"]
+[H: broadcast(libname + "@onInit.mts: initializing UDFS ", "gm")]
+[H: "-----Check-----"]
+[H: "cRoll UDF, does a check and displays results. The result is measured in successes."]
+[H: broadcast(libname + "@onInit.mts: creating 'cRoll'", "gm")]
+[H: defineFunction("cRoll", "cRoll@Lib:"+libname)]
