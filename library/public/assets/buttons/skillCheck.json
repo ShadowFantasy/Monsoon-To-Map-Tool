@@ -1,0 +1,15 @@
+{
+    "applyToSelected": 1,
+    "autoExecute": 1,
+    "color": "green",
+    "fontColor": "black",
+    "fontSize": "1.00em",
+    "includeLabel": 0,
+    "group": "Dice@monsoon.sheetapi",
+    "sortBy": 0,
+    "label": "Skill Check",
+    "maxWidth": "",
+    "minWidth": "",
+    "playerEditable": 0,
+    "tooltip": "Make a Skill Check"
+}

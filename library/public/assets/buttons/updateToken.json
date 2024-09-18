@@ -1,0 +1,15 @@
+{
+    "applyToSelected": 1,
+    "autoExecute": 1,
+    "color": "white",
+    "fontColor": "black",
+    "fontSize": "1.00em",
+    "includeLabel": 0,
+    "group": "Playersheet@monsoon.sheetapi",
+    "sortBy": 0,
+    "label": "Update Token",
+    "maxWidth": "",
+    "minWidth": "",
+    "playerEditable": 0,
+    "tooltip": "Update this token using their gm given name"
+}
