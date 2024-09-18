@@ -1,0 +1,15 @@
+{
+    "applyToSelected": 0,
+    "autoExecute": 1,
+    "color": "green",
+    "fontColor": "black",
+    "fontSize": "1.00em",
+    "includeLabel": 0,
+    "group": "Mastersheet@monsoon.sheetapi",
+    "sortBy": 0,
+    "label": "Set Mastersheet",
+    "maxWidth": "",
+    "minWidth": "",
+    "playerEditable": 0,
+    "tooltip": "Set or update the mastersheet used for updating token properties."
+}

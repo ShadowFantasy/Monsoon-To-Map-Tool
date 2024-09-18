@@ -1,0 +1,15 @@
+{
+    "applyToSelected": 0,
+    "autoExecute": 1,
+    "color": "green",
+    "fontColor": "black",
+    "fontSize": "1.00em",
+    "includeLabel": 0,
+    "group": "Mastersheet@monsoon.sheetapi",
+    "sortBy": 1,
+    "label": "Give Sheet Access",
+    "maxWidth": "",
+    "minWidth": "",
+    "playerEditable": 1,
+    "tooltip": "Gives limited sheet access for token updatability"
+}

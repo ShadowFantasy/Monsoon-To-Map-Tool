@@ -1,0 +1,53 @@
+[H: libname = "net.shadow.fantasy.lib.monsoon.sheetapi"]
+[H: broadcast(libname + "@onInit.mts: initializing", "gm")]
+[H: broadcast(libname + "@onInit.mts: creating javascript namespace \"net.monsoon.lib\"", "gm")]
+[H: scriptspace = "net.monsoon.lib"]
+[H: jsfile = data.getStaticData(libname, "js/ValMS.js")]
+[H: js.createNS(scriptspace, 1)]
+[H: js.evalNS(scriptspace, jsfile)]
+
+[H: "-----------Mastersheet@monsoon.sheetapi-----------"]
+[H: "Clear Mastersheet@monsoon.sheetapi to ensure proper updates if any."]
+[H: broadcast(libname + "@onInit.mts: resetting Mastersheet@monsoon.sheetapi gm macro panel...", "gm")]
+[H: macroGroup = getMacroGroup("Mastersheet@monsoon.sheetapi", ",", "gm")]
+[H, FOREACH(index, macroGroup): removeMacro(index, "gm")]
+
+[H: "-----Set Mastersheet-----"]
+[H: "Creates the mastersheet update button. This is used for setting the link to the mastersheet that other important scripts require"]
+[H: mtsfile = data.getStaticData(libname, "assets/buttons/setMS.mts")]
+[H: jsonfile = data.getStaticData(libname, "assets/buttons/setMS.json")]
+[H: mtsname = json.get(jsonfile,"label")]
+
+[H: broadcast(libname + "@onInit.mts: creating '" + mtsname +"'", "gm")]
+[H: mcbindex = createMacro(jsonfile, "gm")]
+[H: setMacroCommand(mcbindex, mtsfile, "gm")]
+
+[H: "-----Give Sheet Access-----"]
+[H: "Creates the player token setup button. This is used to give players mastersheet access to update their tokens."]
+[H: mtsfile = data.getStaticData(libname, "assets/buttons/setPD.mts")]
+[H: jsonfile = data.getStaticData(libname, "assets/buttons/setPD.json")]
+[H: mtsname = json.get(jsonfile,"label")]
+
+[H: broadcast(libname + "@onInit.mts: creating '" + mtsname +"'", "gm")]
+[H: mcbindex = createMacro(jsonfile, "gm")]
+[H: setMacroCommand(mcbindex, mtsfile, "gm")]
+
+[H: "-----Update Selected Players-----"]
+[H: "Creates the update selected button. This is used to allow the gm to update multiple selected player tokens."]
+[H: mtsfile = data.getStaticData(libname, "assets/buttons/updateSP.mts")]
+[H: jsonfile = data.getStaticData(libname, "assets/buttons/updateSP.json")]
+[H: mtsname = json.get(jsonfile,"label")]
+
+[H: broadcast(libname + "@onInit.mts: creating '" + mtsname +"'", "gm")]
+[H: mcbindex = createMacro(jsonfile, "gm")]
+[H: setMacroCommand(mcbindex, mtsfile, "gm")]
+
+[H: "-----Update All Players"]
+[H: "Creates the update all button. This is used to allow the gm to update all player tokens."]
+[H: mtsfile = data.getStaticData(libname, "assets/buttons/updateAP.mts")]
+[H: jsonfile = data.getStaticData(libname, "assets/buttons/updateAP.json")]
+[H: mtsname = json.get(jsonfile,"label")]
+
+[H: broadcast(libname + "@onInit.mts: creating '" + mtsname +"'", "gm")]
+[H: mcbindex = createMacro(jsonfile, "gm")]
+[H: setMacroCommand(mcbindex, mtsfile, "gm")]

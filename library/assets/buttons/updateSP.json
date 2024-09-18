@@ -1,0 +1,15 @@
+{
+    "applyToSelected": 0,
+    "autoExecute": 1,
+    "color": "green",
+    "fontColor": "black",
+    "fontSize": "1.00em",
+    "includeLabel": 0,
+    "group": "Mastersheet@monsoon.sheetapi",
+    "sortBy": 1,
+    "label": "Update Selected Players",
+    "maxWidth": "",
+    "minWidth": "",
+    "playerEditable": 2,
+    "tooltip": "Updates all selected player tokens"
+}
