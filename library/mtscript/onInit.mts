@@ -70,7 +70,13 @@
 
 [H: "-----------User Defined Functions-----------"]
 [H: broadcast(libname + "@onInit.mts: initializing UDFS ", "gm")]
+
 [H: "-----Check-----"]
 [H: "cRoll UDF, does a check and displays results. The result is measured in successes."]
 [H: broadcast(libname + "@onInit.mts: creating 'cRoll'", "gm")]
 [H: defineFunction("cRoll", "cRoll@Lib:"+libname)]
+
+[H: "-----Total-----"]
+[H: "cRoll UDF, sums up a dice roll and displays results. The result is measured by the sum total."]
+[H: broadcast(libname + "@onInit.mts: creating 'tRoll'", "gm")]
+[H: defineFunction("tRoll", "tRoll@Lib:"+libname)]
