@@ -1,6 +1,7 @@
 [H: manual = "@description Standard output for totals.<br>"+
 "@param dice The number of dice to roll. Accepts an integer.<br>"+
 "@param sides* The number of sides on the dice. Default 6.<br>"+
+"@param flatMod* A flat value added to the total"+
 "@param doFormat* Whether the return should be formated for display. Accepts true(1) or false(0). Defaults to true(1).<br>"+
 "@param title* The text that is displayed with the roll. Only matters when doFormat is true. Accepts a string. Defaults to CHECK.<br>"+
 "@return If doFormat is true it returns a styled text ouput to display rolls, otherwise it returns the raw rolls as a list.<br>"+
@@ -74,21 +75,20 @@
     [H: awfulRoll = thisRoll == 1]
     [H: perfectRoll = thisRoll == sides]
 
-    [H, IF(doFormat): retval =
+    [H, IF(doFormat): retval = listAppend(retval,
         if(perfectRoll,
-            retval + "<span style='color:green;'> " + thisRoll + "</span>",
+            "<span style='color:green;'>"+thisRoll+"</span>",
         if(awfulRoll,
-		    retval + "<span style='color:red;'> " + thisRoll + "</span>",
-            retval + "<span style='color:blue;'> " + thisRoll + "</span>",
-        ))
+		    "<span style='color:red;'>"+thisRoll+"</span>",
+            "<span style='color:gray;'>"+thisRoll+"</span>"
+        )))
     ]
 }]
 [H: total = math.listSum(results) + flatMod]
 [H: retval = if(doFormat,
-retval+"<span style='color:gray;'> + " + flatMod + "</span><br>"+
-"<b style='font-size:1.50em;'>"+title+
-"<span style='color:blue;'>"+successTotal+" </span>"+
-"<span style='color:red;'>"+failTotal+"</span></b>",
-strPropFromVars("total,results")
+    listFormat(retval, "%list", "%item", " + ")+
+    "<span style='color:blue;'> + "+flatMod+"</span><br>"+
+    "<b style='font-size:1.50em;'>"+title+"<span style='color:gray;'>"+total+" </span></b>",
+    strPropFromVars("total,results,flatMod")
 )]
 [R: return(0,retval)]
