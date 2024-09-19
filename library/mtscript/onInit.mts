@@ -77,6 +77,6 @@
 [H: defineFunction("cRoll", "cRoll@Lib:"+libname)]
 
 [H: "-----Total-----"]
-[H: "cRoll UDF, sums up a dice roll and displays results. The result is measured by the sum total."]
+[H: "tRoll UDF, sums up a dice roll and displays results. The result is measured by the sum total."]
 [H: broadcast(libname + "@onInit.mts: creating 'tRoll'", "gm")]
 [H: defineFunction("tRoll", "tRoll@Lib:"+libname)]
