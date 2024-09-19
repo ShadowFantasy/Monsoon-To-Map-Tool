@@ -33,4 +33,4 @@ The are sometimes problems when connecting to a server in Maptool. If your playe
 ## CREDITS
 Monsoon RPG System and Base Character Sheet - Bray-G
 
-Macros, MonsoonToMaptool ADD-on, and Character Sheet Modifications - ShadowFantasy58
+Macros, MonsoonToMaptool ADD-on - ShadowFantasy58
